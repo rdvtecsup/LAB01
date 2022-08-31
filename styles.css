@@ -1,0 +1,16 @@
+.seccion_a label{
+    width: 10cm;
+    size: 200px;
+}
+.datos {
+    width: 50%;
+    float: left;
+}
+.datos_2{
+    width: 50%;
+    float: right;
+}
+
+.metodo_pago {
+    border: 0px;
+}

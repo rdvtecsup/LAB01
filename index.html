@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formularios en HTML 5</title>
+</head>
+<body>
+    <h1 style="text-align:center">Travel Authorization Form</h1>
+    <h3>Sección A: Información del cliente</h3>
+        <p>
+            <fieldset class="seccion_a">
+                <p>
+                    <label for="cargo" >Cargo:</label>
+                    <input type="text" name="cargo" id="cargo"
+                    pattern="[A-Z]"
+                    size= 20px
+                    minlength=4
+                    maxlength=100
+                    autocomplete
+                    required>
+                </p>
+                <p>
+                    <label for="name">Nombre: </label>
+                    <input type="text" name="name" id="name"
+                    pattern="[A-Z]{10}"
+                    required>
+                </p>
+                <p>
+                    <label for="apellido_1">Primer apellido:</label>
+                    <input type="text" name="ape_1" id="ape_1"
+                    pattern="[A-Z]">
+                </p>
+                <p>
+                    <label for="apellido_2">Segundo apellido:</label>
+                    <input type="text" name="ape_2" id="ape_2"
+                    >
+                </p>
+                <p>
+                    <label for="correo">Correo eletrónico:</label>
+                    <input type="text" name="correo" id="correo"
+                    required
+                    >
+                </p>
+                <p>
+                    <label for="telefono">Número de teléfono:</label>
+                    <input type="text" name="telefono" id="telefono"
+                    pattern="[0-9]{9}"
+                    required
+                    >
+                </p>
+            </fieldset>
+        </p>
+        <h3>Sección B: Información del viaje</h3>
+        <p>
+            <fieldset>
+                <div class="datos">
+                    <p>
+                        <label for="nombre">Nombre de la aerolinea:
+                            <select>
+                            <option>Aerolinea 1</option>
+                            <option>Aerolinea 2</option>
+                            <option>Aerolinea 3</option>
+                            <option>Aerolinea 4</option>
+                            <option>Aerolinea 5</option>
+                        </select></label>  
+                    </p>
+                    <p>
+                        <label for="destino">Destino: </label>
+                        <input type="text">
+                    </p>
+                    <p>
+                        <label form="fecha_salida">Fecha de salida:</label>
+                        <input type="date" name="fecha_s" id="fecha_s"
+                        min="2020-01-01"
+                        >
+                    </p>
+                    <p>
+                        <label form="fecha_entrada">Fecha de regreso:</label>
+                        <input type="date" name="fecha_e" id="fecha_e"
+                        min="2020-01-01"
+                        >
+                    </p>
+                    <p>
+                        <label for="coste">Coste estimado</label>
+                        <input type="number"
+                        pattern="[0-9]{}"
+                        required>
+                    </p>
+                    <p>
+                        <label for="">¿Incluye la visita al cliente?</label>
+                        <input type="checkbox">
+                    </p>
+                </div>
+                <div>
+                    <div class="datos_2">
+                        <p>
+                            <label>Gastos adicionales estimados</label>
+                        </p>
+                    </div>
+                    <div class="adicional">
+                        <p>
+                            <label for="alq">Alquiler de coche</label>
+                            <input type="number" name="alq" id="alq">
+                        </p>
+                        <p>
+                            <label>Hotel</label>
+                            <input type="number" name="hotel" id="hotel">
+                        </p>
+                        <p>
+                            <label>Comidas</label>
+                            <input type="" name="comidas" id="comidas">
+                        </p>
+                        <p>
+                            <label>Total estimado</label>
+                            <input type="number" name="total" id="total"
+                            placeholder="0,00 S/.">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <fieldset class="metodo_pago">
+                                <legend>
+                                    Seleccione método de pago:
+                                </legend>
+                                <p><label><input type="radio" name="metodo" value="metalico" >Metalico</label></p>
+                                <p><label><input type="radio" name="metodo" value="tarjeta" >Tarjeta</label></p>
+                                <p><label><input type="radio" name="metodo" value="cheque" >Cheque</label></p>
+                            </fieldset>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="">Propósito de viaje:</label>
+                            <textarea name="texto" rows="5" cols="40"></textarea>
+                            <p>
+                                <input type="submit" value="Enviar">
+                            </p>
+                        </p>
+                    </div>
+                </div>
+            </fieldset>
+        </p>
+    
+    </form>
+</body>
+</html>
